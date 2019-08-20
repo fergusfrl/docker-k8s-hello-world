@@ -1,14 +1,13 @@
 const express = require('express');
-const path = require('path');
 const app = express();
 
 // Routes
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/index.html'));
+    res.sendFile(__dirname + '/index.html');
 });
 
 app.get('/blog', (req, res) => {
-    res.sendFile(path.join(__dirname + '/blog.html'));
+    res.sendFile(__dirname + '/blog.html');
 });
 
 // Server
